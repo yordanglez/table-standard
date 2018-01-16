@@ -9,7 +9,7 @@ The first step is to include the module in our APP
 
 ```typescript
 import {NgModule} from '@angular/core';
-import {TablesModule} from "tables.module";
+import {TablesModule} from "table-standard/tables.module";
 
 @NgModule ({
   imports: [
