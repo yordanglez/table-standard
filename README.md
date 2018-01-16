@@ -30,7 +30,7 @@ With the tag **<table-standard>** we will add our table and its properties
     >
     </table-standard>
 ```
-The following parameters of the tag **<table-standard>**:
+These are parameters for tag **<table-standard>** :
 
 **data_store**: These are the data that the table will have. The type will be a name_value list.
 **count_rows**: Number of rows per page
