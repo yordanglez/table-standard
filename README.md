@@ -65,6 +65,7 @@ The following parameters of the tag **<data-column>**.
 
 
 The **<ng-template>** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
+
 ```html
 
     <table-standard
@@ -77,7 +78,7 @@ The **<ng-template>** tag with the reference **#cellDisplay** defines how the ce
             [sorteable] = "true">
             
             <ng-template let-my_item_name = "item" #cellDisplay>
-                <div style = "color: red"> {{item.my_item_name}} </div>
+                <div style = "color: red"> {{my_item_name.my_param}} </div>
             </ng-template>
             
         </data-column>
