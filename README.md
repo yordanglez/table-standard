@@ -20,7 +20,7 @@ export class AppModule {}
 ```
 
 Now we can use all the components and directives provided by the module, as we will see below.
-With the tag **<table-standard>** we will add our table and its properties
+With the tag **table-standard** we will add our table and its properties
 
 **Example**
 ```html
@@ -30,7 +30,7 @@ With the tag **<table-standard>** we will add our table and its properties
     >
     </table-standard>
 ```
-These are parameters for tag **<table-standard>** :
+These are parameters for tag **table-standard** :
 
 **data_store**: These are the data that the table will have. The type will be a name_value list.
 
@@ -38,7 +38,7 @@ These are parameters for tag **<table-standard>** :
 
 
 
-The **<data-column>** tag will define the columns of the table and their properties.
+The **data-column** tag will define the columns of the table and their properties.
 
 **Example**
 ```html
@@ -55,7 +55,7 @@ The **<data-column>** tag will define the columns of the table and their propert
     </table-standard>
 ```
 
-The following parameters of the tag **<data-column>**.
+The following parameters of the tag **data-column**.
 
 **property**: The value of this parameter must match with the key in the item of **data_store**. Example (if **property** = "id" in **data_store** the key **id** must exist).
 
@@ -64,7 +64,7 @@ The following parameters of the tag **<data-column>**.
 **sorteable**: If it is **true** the column could be ordered.
 
 
-The **<ng-template>** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
+The **ng-template** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
 
 ```html
 
