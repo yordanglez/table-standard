@@ -19,6 +19,7 @@ import {TablesModule} from "tables.module";
 export class AppModule {}
 ```
 
+## Creating our table
 Now we can use all the components and directives provided by the module, as we will see below.
 With the tag **table-standard** we will add our table and its properties
 
@@ -37,7 +38,7 @@ These are parameters for tag **table-standard** :
 **count_rows**: Number of rows per page
 
 
-
+## Defining columns
 The **data-column** tag will define the columns of the table and their properties.
 
 **Example**
