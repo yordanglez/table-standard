@@ -64,9 +64,22 @@ The following parameters of the tag **<data-column>**.
 The **<ng-template>** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
 ```html
 
-     <ng-template let-my_item_name = "item" #cellDisplay>
-        <div style = "color: red"> {{item.my_item_name}} </div>
-     </ng-template>
+    <table-standard
+        [data_store] = "store"
+        [count_rows] = "2"
+    >
+        <data-column
+            [property] = "'name'"
+            [title] = "'Name'"
+            [sorteable] = "true">
+            
+            <ng-template let-my_item_name = "item" #cellDisplay>
+                <div style = "color: red"> {{item.my_item_name}} </div>
+            </ng-template>
+            
+        </data-column>
+    </table-standard>
+     
 ```
 
 **let-? = "item"**: It will be the name in the context of the **ng-template** that will be given to the item
