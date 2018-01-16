@@ -33,6 +33,7 @@ With the tag **<table-standard>** we will add our table and its properties
 These are parameters for tag **<table-standard>** :
 
 **data_store**: These are the data that the table will have. The type will be a name_value list.
+
 **count_rows**: Number of rows per page
 
 
@@ -57,7 +58,9 @@ The **<data-column>** tag will define the columns of the table and their propert
 The following parameters of the tag **<data-column>**.
 
 **property**: The value of this parameter must matchear with the key in the item of **data_store**. Example (if **property** = "id" in **data_store** the key **id** must exist).
+
 **title**: Name that will be shown in the header of the column.
+
 **raffle**: If it is * true * the column could be ordered otherwise.
 
 
