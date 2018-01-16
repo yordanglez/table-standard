@@ -1,5 +1,5 @@
 <div class="uk-overflow-container">
-    <table class="uk-table uk-table-nowrap">
+    <table class="uk-table uk-table-nowrap" [ngClass] = "tableClassList">
         <thead>
         <tr>
 
@@ -24,9 +24,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let item of data_render" >
+        <tr *ngFor="let item of data_render" #tr (click)="onClickRow(item,tr)" [ngClass] = "rowClassList">
 
-            <td *ngFor="let column of columns"  class="uk-text-center">
+            <td *ngFor="let column of columns"  class="uk-text-center" #th (click)="onClickCell(item[column.property],th)" [ngClass] = "cellClassList">
                 <div *ngIf="!column.cellTemplate" [textContent]="item[column.property]"></div>
                 <div *ngIf="column.cellTemplate" [ngTemplateOutlet]="column.cellTemplate" [ngOutletContext]="{item: item}"></div>
             </td>

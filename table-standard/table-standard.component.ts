@@ -1,4 +1,7 @@
-import {Component, ContentChildren, Input, OnInit, Pipe, QueryList, ViewEncapsulation} from '@angular/core';
+import {
+    Component, ContentChildren, EventEmitter, Input, OnInit, Output, Pipe, QueryList,
+    ViewEncapsulation
+} from '@angular/core';
 import {Column, DataColumn} from "./model/data-column";
 import { toInteger} from "@ng-bootstrap/ng-bootstrap/util/util";
 import {DomSanitizer} from "@angular/platform-browser";
@@ -14,6 +17,11 @@ export class TableStandardComponent implements OnInit {
 
     @Input() data_store: any[];
     @Input() count_rows: number;
+    @Input() tableClassList: any;
+    @Input() rowClassList: any;
+    @Input() cellClassList: any;
+    @Output() click_row: EventEmitter<{value:any,row:any}>;
+    @Output() click_cell: EventEmitter<{value:any,cell:any}>;
     @ContentChildren(DataColumnDirective) columns: QueryList<DataColumnDirective>;
     data_render: any[];
     data_ordered: any[];
@@ -25,6 +33,8 @@ export class TableStandardComponent implements OnInit {
 
 
     constructor(private sanitizer: DomSanitizer) {
+        this.click_row = new EventEmitter();
+        this.click_cell = new EventEmitter();
         this.data_store=[]
         this.data_ordered=[]
         this.current_page = 1;
@@ -90,6 +100,16 @@ export class TableStandardComponent implements OnInit {
             this.data_ordered.reverse();
     }
 
+    onClickRow(value,row)
+    {
+        // console.log({value,row});
+        this.click_row.emit({value,row});
+    }
+    onClickCell(value,cell)
+    {
+        // console.log({value,cell});
+        this.click_cell.emit({value,cell});
+    }
 
 
 
