@@ -10,7 +10,7 @@ import {DataColumnDirective} from "./directives/data-column.directive";
 @Component({
     selector: 'table-standard',
     templateUrl: "./table-standard.component.html",
-    styleUrls: ["./table-standard.component.scss"],
+    styleUrls: ["../assets/css/uikit.css"],
     encapsulation: ViewEncapsulation.None,
 })
 export class TableStandardComponent implements OnInit {
