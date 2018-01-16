@@ -1,0 +1,10 @@
+<ul class="uk-pagination uk-margin-medium-top">
+    <li (click)="onChangePage(current_page-1)" [ngClass]="{'uk-disabled': current_page == 1}" ><a><i class="uk-icon-angle-double-left"></i></a></li>
+
+    <li  *ngFor="let i of pages" (click)="onChangePage(i)" [ngClass]="{'uk-active': current_page == i}" ><a ><span>{{i}}</span></a></li>
+    <!--<li><a href="#">3</a></li>-->
+    <!--<li><a href="#">4</a></li>
+    <!--<li><span>…</span></li>-->-->
+    <!--<li><a href="#">10</a></li>-->
+    <li (click)="onChangePage(current_page+1)" [ngClass]="{'uk-disabled': current_page == count_pages}"><a ><i class="uk-icon-angle-double-right"></i></a></li>
+</ul>

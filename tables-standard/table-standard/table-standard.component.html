@@ -1,0 +1,39 @@
+<div class="uk-overflow-container">
+    <table class="uk-table uk-table-nowrap">
+        <thead>
+        <tr>
+
+            <th  class="uk-width-1-10 uk-text-center" scope="col" *ngFor="let column of columns" #th
+                (click)="onSortBy(column)"
+            >
+
+                <span  style="cursor: pointer" [textContent]="column.title">
+
+                </span>
+                    <span style="cursor: pointer" *ngIf="column.sorteable">
+                    <i *ngIf="column.sortBy == 'ASC'" class="material-icons">expand_less</i>
+                    <i *ngIf="column.sortBy == 'DESC'" class="material-icons">expand_more</i>
+                    <i *ngIf="column.sortBy == 'NONE'" class="material-icons">keyboard_capslock</i>
+
+
+                        </span>
+
+
+
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of data_render" >
+
+            <td *ngFor="let column of columns"  class="uk-text-center">
+                <div *ngIf="!column.cellTemplate" [textContent]="item[column.property]"></div>
+                <div *ngIf="column.cellTemplate" [ngTemplateOutlet]="column.cellTemplate" [ngOutletContext]="{item: item}"></div>
+            </td>
+
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<paginator-standard [count_pages] = "count_pages" (change_page)="onChangePage($event)"></paginator-standard>
