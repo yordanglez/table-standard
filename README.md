@@ -57,7 +57,7 @@ The **<data-column>** tag will define the columns of the table and their propert
 
 The following parameters of the tag **<data-column>**.
 
-**property**: The value of this parameter must matchear with the key in the item of **data_store**. Example (if **property** = "id" in **data_store** the key **id** must exist).
+**property**: The value of this parameter must match with the key in the item of **data_store**. Example (if **property** = "id" in **data_store** the key **id** must exist).
 
 **title**: Name that will be shown in the header of the column.
 
