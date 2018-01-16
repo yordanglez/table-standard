@@ -8,7 +8,7 @@ The first step is to include the module in our APP
 
 
 ```typescript
-import {NgModule} from '@ angular / core';
+import {NgModule} from '@angular/core';
 import {TablesModule} from "tables.module";
 
 @NgModule ({
@@ -33,6 +33,7 @@ With the tag **<table-standard>** we will add our table and its properties
 These are parameters for tag **<table-standard>** :
 
 **data_store**: These are the data that the table will have. The type will be a name_value list.
+
 **count_rows**: Number of rows per page
 
 
@@ -56,9 +57,11 @@ The **<data-column>** tag will define the columns of the table and their propert
 
 The following parameters of the tag **<data-column>**.
 
-**property**: The value of this parameter must matchear with the key in the item of **data_store**. Example (if **property** = "id" in **data_store** the key **id** must exist).
+**property**: The value of this parameter must match with the key in the item of **data_store**. Example (if **property** = "id" in **data_store** the key **id** must exist).
+
 **title**: Name that will be shown in the header of the column.
-**raffle**: If it is * true * the column could be ordered otherwise.
+
+**sorteable**: If it is **true** the column could be ordered.
 
 
 The **<ng-template>** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
@@ -82,4 +85,4 @@ The **<ng-template>** tag with the reference **#cellDisplay** defines how the ce
      
 ```
 
-**let-? = "item"**: It will be the name in the context of the **ng-template** that will be given to the item
+**let-?="item"**: It will be the name in the context of the **ng-template** that will be given to the item
