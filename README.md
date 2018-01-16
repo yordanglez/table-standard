@@ -48,6 +48,8 @@ The **data-column** tag will define the columns of the table and their propertie
     <table-standard
         [data_store] = "store"
         [count_rows] = "2"
+        (click_row)="onClickRow($event)"
+        (click_cell)="onClickCell($event)"
     >
         <data-column
             [property] = "'name'"
@@ -58,13 +60,18 @@ The **data-column** tag will define the columns of the table and their propertie
     </table-standard>
 ```
 
-The following parameters of the tag **data-column**.
+These are parameters for tag **data-column**.
 
 **property**: The value of this parameter must match with the key in the item of **data_store**. Example (if **property** = "id" in **data_store** the key **id** must exist).
 
 **title**: Name that will be shown in the header of the column.
 
 **sorteable**: If it is **true** the column could be ordered.
+
+These are events for tag **data-column**.
+
+**click_row**: This event is triggered by clicking on a row
+**click_cell**: This event is triggered by clicking on a cell
 
 
 The **ng-template** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
