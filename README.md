@@ -31,6 +31,9 @@ With the tag **table-standard** we will add our table and its properties
         [count_rows] = "2"
         (click_row)="onClickRow($event)"
         (click_cell)="onClickCell($event)"
+        [tableClassList]="'my_class'"
+        [rowClassList]="{'class_active': item.active == true}"
+        [cellClassList]="['mi_class1', 'my_class2']"
     >
     </table-standard>
 ```
@@ -38,12 +41,24 @@ These are parameters for tag **table-standard** :
 
 **data_store**: These are the data that the table will have. The type will be a name_value list.
 
-**count_rows**: Number of rows per page
+**count_rows**: Number of rows per page.
 
-These are events for tag **data-column**.
+**tableClassList**: Class list for the table in format as ngClass. 
 
-**click_row**: This event is triggered by clicking on a row
-**click_cell**: This event is triggered by clicking on a cell
+**tableClassList**: Class list for the row in format as ngClass.  
+
+**cellClassList**: Class list for the cell in format as ngClass. 
+
+
+
+These are events for tag **table-standard**.
+
+**click_row**: This event is triggered by clicking on a row. 
+**click_cell**: This event is triggered by clicking on a cell. 
+
+
+
+
 
 ## Defining columns
 
