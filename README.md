@@ -29,6 +29,8 @@ With the tag **table-standard** we will add our table and its properties
     <table-standard
         [data_store] = "store"
         [count_rows] = "2"
+        (click_row)="onClickRow($event)"
+        (click_cell)="onClickCell($event)"
     >
     </table-standard>
 ```
@@ -38,6 +40,10 @@ These are parameters for tag **table-standard** :
 
 **count_rows**: Number of rows per page
 
+These are events for tag **data-column**.
+
+**click_row**: This event is triggered by clicking on a row
+**click_cell**: This event is triggered by clicking on a cell
 
 ## Defining columns
 
@@ -48,8 +54,7 @@ The **data-column** tag will define the columns of the table and their propertie
     <table-standard
         [data_store] = "store"
         [count_rows] = "2"
-        (click_row)="onClickRow($event)"
-        (click_cell)="onClickCell($event)"
+
     >
         <data-column
             [property] = "'name'"
@@ -68,10 +73,7 @@ These are parameters for tag **data-column**.
 
 **sorteable**: If it is **true** the column could be ordered.
 
-These are events for tag **data-column**.
 
-**click_row**: This event is triggered by clicking on a row
-**click_cell**: This event is triggered by clicking on a cell
 
 
 The **ng-template** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
