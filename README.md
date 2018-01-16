@@ -54,6 +54,7 @@ These are parameters for tag **table-standard** :
 These are events for tag **table-standard**.
 
 **click_row**: This event is triggered by clicking on a row. 
+
 **click_cell**: This event is triggered by clicking on a cell. 
 
 
