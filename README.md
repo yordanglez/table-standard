@@ -24,7 +24,7 @@ export class AppModule {}
 Now we can use all the components and directives provided by the module, as we will see below.
 With the tag **table-standard** we will add our table and its properties
 
-**Example**
+**Example**:
 ```html
     <table-standard
         [data_store] = "store"
@@ -64,7 +64,7 @@ These are events for tag **table-standard**.
 
 The **data-column** tag will define the columns of the table and their properties.
 
-**Example**
+**Example**:
 ```html
     <table-standard
         [data_store] = "store"
