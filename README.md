@@ -61,7 +61,7 @@ The following parameters of the tag **<data-column>**.
 
 **title**: Name that will be shown in the header of the column.
 
-**raffle**: If it is * true * the column could be ordered otherwise.
+**sorteable**: If it is **true** the column could be ordered.
 
 
 The **<ng-template>** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
@@ -72,4 +72,4 @@ The **<ng-template>** tag with the reference **#cellDisplay** defines how the ce
      </ng-template>
 ```
 
-**let-? = "item"**: It will be the name in the context of the **ng-template** that will be given to the item
+**let-?="item"**: It will be the name in the context of the **ng-template** that will be given to the item
