@@ -49,10 +49,10 @@ The **data-column** tag will define the columns of the table and their propertie
         [data_store] = "store"
         [count_rows] = "2"
     >
-        <data-column>
+        <data-column
             [property] = "'name'"
             [title] = "'Name'"
-            [sorteable] = "true"
+            [sorteable] = "true">
             
         </data-column>
     </table-standard>
