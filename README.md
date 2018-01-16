@@ -21,9 +21,9 @@ export class AppModule {}
 
 Now we can use all the components and directives provided by the module, as we will see below.
 
-With the label ** <table-standard> ** we will add our table and its properties
+With the label **<table-standard>** we will add our table and its properties
 
-** Example **
+**Example**
 ```html
     <table-standard
         [data_store] = "store"
@@ -31,15 +31,15 @@ With the label ** <table-standard> ** we will add our table and its properties
     >
     </table-standard>
 ```
-The following parameters of the label ** <table-standard> **
-** data_store **: These are the data that the table will have. The type will be a name_value list
-** count_rows **: Number of rows per page
+The following parameters of the label **<table-standard>**
+**data_store**: These are the data that the table will have. The type will be a name_value list
+**count_rows**: Number of rows per page
 
 
 
-The ** <data-column> ** tag will define the columns of the table and their properties.
+The **<data-column>** tag will define the columns of the table and their properties.
 
-** Example **
+**Example**
 ```html
     <table-standard
         [data_store] = "store"
@@ -54,19 +54,19 @@ The ** <data-column> ** tag will define the columns of the table and their prope
     </table-standard>
 ```
 
-The following parameters of the tag ** <data-column> **.
+The following parameters of the tag**<data-column>**.
 
-** property **: The value of this parameter must matchear with the key in the item of ** data_store **. Example (if ** property ** = "id" in ** data_store ** the key ** id ** must exist).
-** title **: Name that will be shown in the header of the column.
-** raffle **: If it is * true * the column could be ordered otherwise.
+**property**: The value of this parameter must matchear with the key in the item of **data_store**. Example (if **property** = "id" in **data_store** the key **id** must exist).
+**title**: Name that will be shown in the header of the column.
+**raffle**: If it is * true * the column could be ordered otherwise.
 
 
-The ** <ng-template> ** tag with the reference ** # cellDisplay ** defines how the cell will be rendered with the element
+The **<ng-template>** tag with the reference **#cellDisplay** defines how the cell will be rendered with the element
 ```html
 
      <ng-template let-my_item_name = "item" #cellDisplay>
-        <div style = "color: red"> {{item.my_item_name}} </ div>
+        <div style = "color: red"> {{item.my_item_name}} </div>
      </ng-template>
 ```
 
-** let -? = "item" **: It will be the name in the context of the ** ng-template ** that will be given to the item
+**let-? = "item"**: It will be the name in the context of the **ng-template** that will be given to the item
