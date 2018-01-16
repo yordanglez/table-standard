@@ -2,7 +2,7 @@
 
 table-satandard is a component for creating tables for angular v2 or more
 
-# Examples
+# First thing First
 
 The first step is to include the module in our APP
 
